@@ -15,7 +15,7 @@ public class Pan : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Fruits"))
+        if (other.gameObject.CompareTag("Ingredient"))
         {
             Destroy(other.gameObject);
             currentScore++;

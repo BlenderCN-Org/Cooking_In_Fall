@@ -4,7 +4,18 @@ using UnityEngine.UI;
 
 public class SpawnFruits : MonoBehaviour {
 
-    public GameObject fruit;
+    [Header("All Ingredients List")]
+    // On récupère tout les prefabs ingredients
+    public Ingredient[] ingredients;
+
+    [Header("Current Order Spawning")]
+    // On crée notre liste d'attente
+    public Ingredient[] ingredientsOrder = new Ingredient[3];
+
+    [Header("Texts Order Spawning")]
+    public Text[] orders = new Text[3];
+
+    [Space(15)]
     public Text buttonText;
     public Transform spawnPoint;
     public float reloadTime;
@@ -15,14 +26,34 @@ public class SpawnFruits : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         _reloadTime = reloadTime;
-        buttonText.text = fruit.name;
+
+        // Initialisation de la liste d'attente
+        for (int i = 0; i < ingredientsOrder.Length; i++)
+        {
+            int rand = Random.Range(0, ingredients.Length);
+            ingredientsOrder[i] = ingredients[rand];
+            orders[i].text = ingredientsOrder[i].name;
+        }
+
+        buttonText.text = ingredientsOrder[0].name;
 	}
 
     public void Spawn() {
 
         if (canSpawn)
         {
-            Instantiate(fruit, spawnPoint.position, Quaternion.identity);
+            Instantiate(ingredientsOrder[0], spawnPoint.position, Quaternion.identity);
+
+            // Update Order
+            ingredientsOrder[0] = ingredientsOrder[1];
+            ingredientsOrder[1] = ingredientsOrder[2];
+            ingredientsOrder[2] = ingredients[Random.Range(0, ingredients.Length)];
+
+            // Update Texts
+            for (int i = 0; i < orders.Length; i++)
+            {
+                orders[i].text = ingredientsOrder[i].name;
+            }
 
             // On recharge le temps de spawn
             StartCoroutine(Reload());
@@ -46,8 +77,7 @@ public class SpawnFruits : MonoBehaviour {
 
         // Spawn de nouveau possible
         canSpawn = true;
-        buttonText.text = fruit.name;
+        buttonText.text = ingredientsOrder[0].name;
         yield break;
     }
-
 }

@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 23505529366696556}
   - component: {fileID: 54701988922012924}
   - component: {fileID: 135497948893411898}
+  - component: {fileID: 114319599698857026}
   m_Layer: 0
-  m_Name: Tomato
-  m_TagString: Fruits
+  m_Name: Apricot
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +59,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 5a27a1f2ff717984a896e1caff8c14aa, type: 2}
+  - {fileID: 2100000, guid: 68347b60fb18690409e86e1848ca0d1b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100,6 +101,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 0
+--- !u!114 &114319599698857026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1378638257445776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f665ffa05a8b574baa666a4694a39a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
 --- !u!135 &135497948893411898
 SphereCollider:
   m_ObjectHideFlags: 1
