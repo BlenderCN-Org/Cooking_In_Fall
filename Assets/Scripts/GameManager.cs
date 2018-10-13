@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace FallingCooking
@@ -8,11 +7,15 @@ namespace FallingCooking
     {
         public enum Type // Ingredient Type
         {
-            Egg,
-            Pumpkin,
+            Tomato,
             Apricot,
-            Potato,
-            Egplant
+            Pumpkin,
+            Egg,
+            Watermelon,
+            Herb,
+            Banana,
+            Apple,
+            Cherry
         };
 
         //public int[] numberReceipesArray;
@@ -24,7 +27,7 @@ namespace FallingCooking
         public gameStates gameState = gameStates.Playing;
 
         [Header("Recipes for this Level")]
-        public List<RecipeTemplate> recipes;
+        public RecipeTemplate[] recipes;
 
         void Awake()
         {

@@ -44,7 +44,7 @@ public class SpawnFruits : MonoBehaviour {
 
         if (canSpawn)
         {
-            Instantiate(ingredientsOrder[0], spawnPoint.position, Quaternion.identity);
+            Instantiate(ingredientsOrder[0], spawnPoint.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
 
             // Update Order
             ingredientsOrder[0] = ingredientsOrder[1];
