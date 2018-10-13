@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1581430339024408}
+  m_RootGameObject: {fileID: 1415829914233160}
   m_IsPrefabAsset: 1
---- !u!1 &1581430339024408
+--- !u!1 &1415829914233160
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4737245441643856}
-  - component: {fileID: 114493976112935296}
+  - component: {fileID: 4866969052853726}
+  - component: {fileID: 114978126357152856}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -27,12 +27,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4737245441643856
+--- !u!4 &4866969052853726
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1581430339024408}
+  m_GameObject: {fileID: 1415829914233160}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,20 +40,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114493976112935296
+--- !u!114 &114978126357152856
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1581430339024408}
+  m_GameObject: {fileID: 1415829914233160}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a083d75c497e4844adc52d1837633b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - {fileID: 114319599698857026, guid: db8c772a52de1854b932b465f0ff1031, type: 2}
-  - {fileID: 114057478275704876, guid: 20d98bac9fcf1aa4b98f50ecb82e3904, type: 2}
+  - {fileID: 114427330487247830, guid: a33dab3bbc6e85742a3c5dd5b92aad06, type: 2}
+  - {fileID: 114318690564701556, guid: d03031118b3d11345a13f8fd5861a75d, type: 2}
   - {fileID: 114876705153728004, guid: 7cdbb4da2a9023c4286d7da51ac81fdf, type: 2}
   ingredientsOrder:
   - {fileID: 0}

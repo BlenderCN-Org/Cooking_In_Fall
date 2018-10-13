@@ -53,5 +53,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameState: 0
   recipes:
-  - {fileID: 11400000, guid: b7a7e363246956740b86f4f47310c41e, type: 2}
-  - {fileID: 11400000, guid: ae91f28cc587a374083eb3a17c5285c1, type: 2}
+  - {fileID: 11400000, guid: 2dac4553b55dc86479ac36cea0669e7d, type: 2}
+  - {fileID: 11400000, guid: 2dac4553b55dc86479ac36cea0669e7d, type: 2}
