@@ -54,7 +54,7 @@ MonoBehaviour:
   ingredients:
   - {fileID: 114319599698857026, guid: db8c772a52de1854b932b465f0ff1031, type: 2}
   - {fileID: 114057478275704876, guid: 20d98bac9fcf1aa4b98f50ecb82e3904, type: 2}
-  - {fileID: 114322422049419966, guid: 3338e8118920c154aa204221263c2f69, type: 2}
+  - {fileID: 114876705153728004, guid: 7cdbb4da2a9023c4286d7da51ac81fdf, type: 2}
   ingredientsOrder:
   - {fileID: 0}
   - {fileID: 0}

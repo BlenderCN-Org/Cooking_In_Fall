@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[SerializeField]
 public class PlateformDeplacement : MonoBehaviour {
 
     [SerializeField]
     public enum TypeOfDeplacement {None, Horizontal, Vertical, DiagonalLeftToRight, DiagonalRightToLeft };
 
-    public TypeOfDeplacement direction; // down or left by default
+    [SerializeField]
+    private TypeOfDeplacement direction; // down or left by default
 
     // animate the game object from -1 to +1 and back => move first towards min value
     public float minimum = -1.0F;
@@ -15,22 +17,20 @@ public class PlateformDeplacement : MonoBehaviour {
 
     public float speed = 0.5f;
     // starting value for the Lerp
-    static float t = 0.0f;
+    private float t = 0.0f;
 
     //Damp values
     public float smoothTime = 0.3F;
     private Vector3 velocity = Vector3.zero;
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
+    private Vector3 targetPosition;
+    
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         // transform.position = new Vector3(Mathf.Lerp(minimum, maximum, t), 0, 0); => Default movment
 
-        Vector3 targetPosition = this.transform.position;
+        targetPosition = transform.position;
         switch (direction)
         {
             // Define target position, Lerp will be used to define min and max position

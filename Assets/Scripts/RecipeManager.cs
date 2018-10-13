@@ -41,7 +41,6 @@ public class RecipeManager : MonoBehaviour {
             foreach (Ingredient ing in recipe.listIngredients) // Create ingredients
             {
                 GameObject newIng = Instantiate(prefabIngredient, parentIngredients);
-                Debug.Log("ing.type" + ing.type);
                 newIng.transform.GetChild(0).GetComponent<Text>().text = ing.type.ToString();
             }
         }
