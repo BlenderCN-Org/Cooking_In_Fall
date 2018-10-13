@@ -56,7 +56,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1689777594900874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 556790a2bc4fd6943997ba07b4f0032a, type: 3}
+  m_Script: {fileID: 11500000, guid: 44cfdfc0a70db174f80977f0a1062d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   prefabRecipeUI: {fileID: 1761594690437494, guid: 0d92d15f03b3d204b981097c4ca7781c,
