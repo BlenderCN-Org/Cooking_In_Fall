@@ -310,13 +310,13 @@ MonoBehaviour:
   recipeName: FruitSalad
   recipe:
   - number: 1
-    type: Banana
+    type: 2
   - number: 1
-    type: Apple
+    type: 3
   - number: 1
-    type: Pear
+    type: 4
   parentIngredients: {fileID: 224335684012096558}
-  prefabIngredient: {fileID: 1266038006329480, guid: 0af3e60e88b015c4ebfe28d242e4824b,
+  prefabIngredient: {fileID: 1266038006329480, guid: a85e9ede3452a7149968b7e73f4cf60e,
     type: 2}
 --- !u!114 &114356941352347502
 MonoBehaviour:
@@ -332,11 +332,11 @@ MonoBehaviour:
   recipeName: Tomato soup
   recipe:
   - number: 2
-    type: Tomato
+    type: 0
   - number: 1
-    type: Herb
+    type: 1
   parentIngredients: {fileID: 224056115705407578}
-  prefabIngredient: {fileID: 1266038006329480, guid: 0af3e60e88b015c4ebfe28d242e4824b,
+  prefabIngredient: {fileID: 1266038006329480, guid: a85e9ede3452a7149968b7e73f4cf60e,
     type: 2}
 --- !u!114 &114377452813337268
 MonoBehaviour:

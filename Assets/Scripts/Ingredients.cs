@@ -6,6 +6,8 @@ using UnityEngine;
 public class Ingredients {
     
     public int number;
-    public string type;
+    public enum Ingredient { Tomato, Herb, Banana, Apple, Cherry };
+
+    public Ingredient type;
 
 }
