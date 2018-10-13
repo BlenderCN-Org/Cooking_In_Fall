@@ -15,10 +15,12 @@ public class SpawnFruits : MonoBehaviour {
     [Header("Texts Order Spawning")]
     public Text[] orders = new Text[3];
 
+    [Header("Settings")]
+    public float reloadTime;
+    public Transform spawnPoint;
+
     [Space(15)]
     public Text buttonText;
-    public Transform spawnPoint;
-    public float reloadTime;
 
     private float _reloadTime;
     private bool canSpawn = true;
@@ -35,7 +37,7 @@ public class SpawnFruits : MonoBehaviour {
             orders[i].text = ingredientsOrder[i].name;
         }
 
-        buttonText.text = ingredientsOrder[0].name;
+        buttonText.text = "Launch";
 	}
 
     public void Spawn() {
@@ -77,7 +79,7 @@ public class SpawnFruits : MonoBehaviour {
 
         // Spawn de nouveau possible
         canSpawn = true;
-        buttonText.text = ingredientsOrder[0].name;
+        buttonText.text = "Launch";
         yield break;
     }
 }
