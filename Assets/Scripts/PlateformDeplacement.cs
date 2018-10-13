@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlateformDeplacement : MonoBehaviour {
 
     [SerializeField]
-    public enum TypeOfDeplacement {Horizontal, Vertical, DiagonalLeftToRight, DiagonalRightToLeft };
+    public enum TypeOfDeplacement {None, Horizontal, Vertical, DiagonalLeftToRight, DiagonalRightToLeft };
 
     public TypeOfDeplacement direction; // down or left by default
 

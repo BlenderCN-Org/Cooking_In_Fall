@@ -10,7 +10,7 @@ public class Pan : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         currentScore = 0;
-        score.text = currentScore.ToString("0");
+        //score.text = currentScore.ToString("0");
     }
 
     private void OnTriggerEnter(Collider other)
