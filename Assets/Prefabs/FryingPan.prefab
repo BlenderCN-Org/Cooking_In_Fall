@@ -19,8 +19,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4635117004265678}
-  - component: {fileID: 114336795363963534}
-  - component: {fileID: 65400556857998190}
   m_Layer: 0
   m_Name: FryingPan
   m_TagString: Untagged
@@ -38,6 +36,8 @@ GameObject:
   - component: {fileID: 4031310502877444}
   - component: {fileID: 33346766586402040}
   - component: {fileID: 23915370819666162}
+  - component: {fileID: 64651914276437528}
+  - component: {fileID: 114565006913154366}
   m_Layer: 0
   m_Name: Pan
   m_TagString: Untagged
@@ -116,24 +116,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1273387127362396}
   m_Mesh: {fileID: 4300000, guid: 81c6d22152b2bce4ba510f95af570dbc, type: 3}
---- !u!65 &65400556857998190
-BoxCollider:
+--- !u!64 &64651914276437528
+MeshCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1132216729615964}
+  m_GameObject: {fileID: 1273387127362396}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.0302572, y: 0.4631257, z: 2.184413}
-  m_Center: {x: 0, y: 0.09636903, z: 0}
---- !u!114 &114336795363963534
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 81c6d22152b2bce4ba510f95af570dbc, type: 3}
+--- !u!114 &114565006913154366
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1132216729615964}
+  m_GameObject: {fileID: 1273387127362396}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7adc39d66a79ec24ea74119822f7f28d, type: 3}

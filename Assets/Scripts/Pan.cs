@@ -4,11 +4,13 @@ using UnityEngine.UI;
 public class Pan : MonoBehaviour {
 
     public Text score;
+    private GameObject cookedIngredient;
 
     private int currentScore;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         currentScore = 0;
         //score.text = currentScore.ToString("0");
     }
@@ -18,9 +20,16 @@ public class Pan : MonoBehaviour {
         if (other.gameObject.CompareTag("Ingredient"))
         {
             RecipeManager.recipeManagerInstance.IngredientInPan(other.gameObject);
-            Destroy(other.gameObject);
+            cookedIngredient = other.gameObject;
+            Invoke("IngredientTouchedPan", 2);
             currentScore++;
-            score.text = currentScore.ToString("0");
+            //score.text = currentScore.ToString("0");
         }
+    }
+
+
+    void IngredientTouchedPan()
+    {
+        Destroy(cookedIngredient);
     }
 }
