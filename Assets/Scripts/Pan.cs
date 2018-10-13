@@ -17,6 +17,7 @@ public class Pan : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Ingredient"))
         {
+            RecipeManager.recipeManagerInstance.IngredientInPan(other.gameObject);
             Destroy(other.gameObject);
             currentScore++;
             score.text = currentScore.ToString("0");

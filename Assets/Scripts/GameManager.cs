@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace FallingCooking
@@ -23,7 +24,7 @@ namespace FallingCooking
         public gameStates gameState = gameStates.Playing;
 
         [Header("Recipes for this Level")]
-        public RecipeTemplate[] recipes;
+        public List<RecipeTemplate> recipes;
 
         void Awake()
         {

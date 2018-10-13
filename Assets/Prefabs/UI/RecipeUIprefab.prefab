@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 224591853999111628}
   - component: {fileID: 222683005645818682}
   - component: {fileID: 114065129604787340}
+  - component: {fileID: 114737408197896872}
   m_Layer: 5
   m_Name: RecipeUIprefab
   m_TagString: Untagged
@@ -117,6 +118,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114737408197896872
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761594690437494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05bdea233b25e0d4d8ab541e901c97e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientLists: []
 --- !u!114 &114852234145848454
 MonoBehaviour:
   m_ObjectHideFlags: 1

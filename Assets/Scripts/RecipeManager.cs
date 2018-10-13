@@ -12,6 +12,8 @@ public class RecipeManager : MonoBehaviour {
     private Transform parentIngredients;
     public GameObject prefabIngredient;
 
+    private RecipeTemplate currentRecipe;
+    public List<GameObject> recipesUI;
 
     //SINGLETON
     private void Awake()
@@ -35,14 +37,47 @@ public class RecipeManager : MonoBehaviour {
         foreach (RecipeTemplate recipe in GameManager.instance.recipes) // Create ingredients
         {
            GameObject newRecipe = Instantiate(prefabRecipeUI, this.transform);
-            // Init UI
             newRecipe.transform.Find("Name").GetComponent<Text>().text = recipe.name; // Replace recipe name
             parentIngredients = newRecipe.transform.Find("Ingredients");
-            foreach (Ingredient ing in recipe.listIngredients) // Create ingredients
+            // Init UI for ingredients
+            foreach (Ingredient ing in recipe.listIngredients)
             {
                 GameObject newIng = Instantiate(prefabIngredient, parentIngredients);
                 newIng.transform.GetChild(0).GetComponent<Text>().text = ing.type.ToString();
+                newRecipe.GetComponent<RecipeUIManager>().ingredientListsUI.Add(newIng);
+                newRecipe.GetComponent<RecipeUIManager>().ingredientListsEnum.Add(ing.type);
+            }
+            recipesUI.Add(newRecipe);
+        }
+        currentRecipe = GameManager.instance.recipes[0];
+    }
+
+    public void IngredientInPan(GameObject ingredient)
+    {
+        // Check ingredient in list
+        if (CheckIngredient(ingredient)) //ingredient.GetComponent<Ingredient>().type == GameManager.Type.Egplant
+        {
+            Destroy(recipesUI[0].GetComponent<RecipeUIManager>().ingredientListsUI[0]);
+            recipesUI[0].GetComponent<RecipeUIManager>().ingredientListsUI.RemoveAt(0); // remove  UI ingredient
+
+            // Check if Recipe is complete
+            if (recipesUI[0].GetComponent<RecipeUIManager>().ingredientListsUI.Count == 0) // If there is no more ingredients in recipe
+            {
+                Destroy(recipesUI[0]);
+                recipesUI.RemoveAt(0);
+                GameManager.instance.recipes.RemoveAt(0);
+                if (GameManager.instance.recipes.Count != 0)
+                {
+                    currentRecipe = GameManager.instance.recipes[0];
+                }
             }
         }
+    }
+
+    private bool CheckIngredient(GameObject ingredient) {
+        bool result = false;
+        result = recipesUI[0].GetComponent<RecipeUIManager>().ingredientListsEnum.Contains(ingredient.GetComponent<Ingredient>().type);
+
+        return result;
     }
 }
