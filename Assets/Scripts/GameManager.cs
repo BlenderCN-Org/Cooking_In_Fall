@@ -10,6 +10,7 @@ namespace FallingCooking
         {
             Apricot,
             Aubergine,
+            Cheese,
             Egg,
             Eggplant,
             Potato,
