@@ -8,16 +8,10 @@ namespace FallingCooking
     {
         public enum Type // Ingredient Type
         {
-            Tomato,
-            Apricot,
             Pumpkin,
-            Eggplant,
             Egg,
-            Watermelon,
-            Herb,
-            Banana,
-            Apple,
-            Cherry
+            Potato,
+            Eggplant,
         };
 
         //public int[] numberReceipesArray;
