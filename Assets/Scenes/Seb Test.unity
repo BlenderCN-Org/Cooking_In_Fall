@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fruit: {fileID: 1162903089608110, guid: c9dbbb39d087e4f4d88d36be6a3095b1, type: 2}
-  fruitName: {fileID: 1491506964}
+  buttonText: {fileID: 1491506964}
   spawnPoint: {fileID: 1538567084}
   reloadTime: 2
 --- !u!114 &223585090
