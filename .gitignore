@@ -28,6 +28,7 @@ Temp/
 Library/
 Library*
 UnityPackageManager/
+*vs/
 
 =====================================
 Visual Studio / MonoDevelop generated
