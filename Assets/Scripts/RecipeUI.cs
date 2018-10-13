@@ -7,7 +7,7 @@ using UnityEngine.UI;
 // Ex : Tomato soup = 2 tomatoes
 // Tomato soup
 // 2 Tomato
-public class RecipeNew : MonoBehaviour {
+public class RecipeUI : MonoBehaviour {
     public string recipeName;
     public Ingredients[] recipe;
 
