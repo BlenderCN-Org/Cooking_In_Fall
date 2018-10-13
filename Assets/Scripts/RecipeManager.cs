@@ -12,8 +12,6 @@ public class RecipeManager : MonoBehaviour {
     private Transform parentIngredients;
     public GameObject prefabIngredient;
 
-    [SerializeField]
-    public List<Ingredients[]> recipes;
 
     //SINGLETON
     private void Awake()
@@ -34,17 +32,18 @@ public class RecipeManager : MonoBehaviour {
     private void Start () {
 
         // Init UI
-        //foreach (Receipe recipe in GameManager.instance.recipes) // Create ingredients
-        //{
-        //    GameObject newRecipe = Instantiate(prefabRecipeUI, this.transform);
-        //    // Init UI
-        //    newRecipe.transform.Find("Name").GetComponent<Text>().text = recipe.recipeName; // Replace recipe name
-        //    parentIngredients = newRecipe.transform.Find("Ingredients");
-        //    foreach (Ingredients ing in recipe.ingredientsArray) // Create ingredients
-        //    {
-        //        GameObject newIng = Instantiate(prefabIngredient, parentIngredients);
-        //        newIng.transform.GetChild(0).GetComponent<Text>().text = ing.number + " : " + ing.type;
-        //    }
-        //}
+        foreach (RecipeTemplate recipe in GameManager.instance.recipes) // Create ingredients
+        {
+           GameObject newRecipe = Instantiate(prefabRecipeUI, this.transform);
+            // Init UI
+            newRecipe.transform.Find("Name").GetComponent<Text>().text = recipe.name; // Replace recipe name
+            parentIngredients = newRecipe.transform.Find("Ingredients");
+            foreach (Ingredient ing in recipe.listIngredients) // Create ingredients
+            {
+                GameObject newIng = Instantiate(prefabIngredient, parentIngredients);
+                Debug.Log("ing.type" + ing.type);
+                newIng.transform.GetChild(0).GetComponent<Text>().text = ing.type.ToString();
+            }
+        }
     }
 }

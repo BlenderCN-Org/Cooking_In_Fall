@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -384,6 +384,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114419218928341030, guid: 5b89f92da6604724e89864e5cffde318,
+        type: 2}
+      propertyPath: recipes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4201524748241820, guid: 5b89f92da6604724e89864e5cffde318, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -416,6 +421,30 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114419218928341030, guid: 5b89f92da6604724e89864e5cffde318,
+        type: 2}
+      propertyPath: recipes.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: b7a7e363246956740b86f4f47310c41e,
+        type: 2}
+    - target: {fileID: 114419218928341030, guid: 5b89f92da6604724e89864e5cffde318,
+        type: 2}
+      propertyPath: recipes.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: ae91f28cc587a374083eb3a17c5285c1,
+        type: 2}
+    - target: {fileID: 114419218928341030, guid: 5b89f92da6604724e89864e5cffde318,
+        type: 2}
+      propertyPath: recipes.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: ae91f28cc587a374083eb3a17c5285c1,
+        type: 2}
+    - target: {fileID: 114419218928341030, guid: 5b89f92da6604724e89864e5cffde318,
+        type: 2}
+      propertyPath: recipes.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: b7a7e363246956740b86f4f47310c41e,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b89f92da6604724e89864e5cffde318, type: 2}
   m_IsPrefabAsset: 0
@@ -1083,7 +1112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabRecipeUI: {fileID: 1761594690437494, guid: 0d92d15f03b3d204b981097c4ca7781c,
     type: 2}
-  prefabIngredient: {fileID: 1266038006329480, guid: a85e9ede3452a7149968b7e73f4cf60e,
+  prefabIngredient: {fileID: 1266038006329480, guid: 866ae5ef26469904cb59d44a715ae016,
     type: 2}
 --- !u!114 &2067399012
 MonoBehaviour:
