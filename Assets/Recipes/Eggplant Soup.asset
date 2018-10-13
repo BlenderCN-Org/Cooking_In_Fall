@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: Eggplant Soup
   m_EditorClassIdentifier: 
   listIngredients:
-  - {fileID: 114876705153728004, guid: 7cdbb4da2a9023c4286d7da51ac81fdf, type: 2}
-  - {fileID: 114876705153728004, guid: 7cdbb4da2a9023c4286d7da51ac81fdf, type: 2}
-  - {fileID: 114876705153728004, guid: 7cdbb4da2a9023c4286d7da51ac81fdf, type: 2}
+  - {fileID: 114474126949801724, guid: aeae1012aa73c734998ca8ceca08c7a6, type: 2}
+  - {fileID: 114474126949801724, guid: aeae1012aa73c734998ca8ceca08c7a6, type: 2}
+  - {fileID: 114474126949801724, guid: aeae1012aa73c734998ca8ceca08c7a6, type: 2}
