@@ -15,13 +15,17 @@ namespace FallingCooking
             Apple,
             Cherry
         };
-        public int[] numberReceipesArray;
-        public Receipe[] gameRecipes; 
+
+        //public int[] numberReceipesArray;
+        //public Receipe[] gameRecipes; 
 
         public static GameManager instance = null;
 
         public enum gameStates { Playing, End };
         public gameStates gameState = gameStates.Playing;
+
+        [Header("Recipes for this Level")]
+        public RecipeTemplate[] recipes;
 
         void Awake()
         {
@@ -38,17 +42,17 @@ namespace FallingCooking
 
         public void Start()
         {
-            if (numberReceipesArray.Length != 0)
-            {
-                gameRecipes = new Receipe[numberReceipesArray.Length];
-                for (int i = 0; i < gameRecipes.Length; i++)
-                {
-                    gameRecipes[i] = this.GetComponent<ReceipeTemplate>().availableRecipes[numberReceipesArray[i]];
-                }
-            }
-            else {
-                Debug.Log("Empty numberReceipesArray");
-            }
+            //if (numberReceipesArray.Length != 0)
+            //{
+            //    gameRecipes = new Receipe[numberReceipesArray.Length];
+            //    for (int i = 0; i < gameRecipes.Length; i++)
+            //    {
+            //        gameRecipes[i] = this.GetComponent<ReceipeTemplate>().availableRecipes[numberReceipesArray[i]];
+            //    }
+            //}
+            //else {
+            //    Debug.Log("Empty numberReceipesArray");
+            //}
         }
 
         public void LoadScene(string scene)

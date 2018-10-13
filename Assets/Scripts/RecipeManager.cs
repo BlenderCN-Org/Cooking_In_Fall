@@ -34,17 +34,17 @@ public class RecipeManager : MonoBehaviour {
     private void Start () {
 
         // Init UI
-        foreach (Receipe recipe in GameManager.instance.gameRecipes) // Create ingredients
-        {
-            GameObject newRecipe = Instantiate(prefabRecipeUI, this.transform);
-            // Init UI
-            newRecipe.transform.Find("Name").GetComponent<Text>().text = recipe.recipeName; // Replace recipe name
-            parentIngredients = newRecipe.transform.Find("Ingredients");
-            foreach (Ingredients ing in recipe.ingredientsArray) // Create ingredients
-            {
-                GameObject newIng = Instantiate(prefabIngredient, parentIngredients);
-                newIng.transform.GetChild(0).GetComponent<Text>().text = ing.number + " : " + ing.type;
-            }
-        }
+        //foreach (Receipe recipe in GameManager.instance.recipes) // Create ingredients
+        //{
+        //    GameObject newRecipe = Instantiate(prefabRecipeUI, this.transform);
+        //    // Init UI
+        //    newRecipe.transform.Find("Name").GetComponent<Text>().text = recipe.recipeName; // Replace recipe name
+        //    parentIngredients = newRecipe.transform.Find("Ingredients");
+        //    foreach (Ingredients ing in recipe.ingredientsArray) // Create ingredients
+        //    {
+        //        GameObject newIng = Instantiate(prefabIngredient, parentIngredients);
+        //        newIng.transform.GetChild(0).GetComponent<Text>().text = ing.number + " : " + ing.type;
+        //    }
+        //}
     }
 }

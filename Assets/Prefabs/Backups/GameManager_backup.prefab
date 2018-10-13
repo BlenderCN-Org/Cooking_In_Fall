@@ -9,30 +9,31 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1146989626535016}
+  m_RootGameObject: {fileID: 1785052571972864}
   m_IsPrefabAsset: 1
---- !u!1 &1146989626535016
+--- !u!1 &1785052571972864
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4498311135943882}
-  - component: {fileID: 114085137440431048}
+  - component: {fileID: 4201524748241820}
+  - component: {fileID: 114419218928341030}
+  - component: {fileID: 114394782802446976}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: GameManager_backup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4498311135943882
+--- !u!4 &4201524748241820
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1146989626535016}
+  m_GameObject: {fileID: 1785052571972864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,18 +41,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114085137440431048
+--- !u!114 &114394782802446976
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1146989626535016}
+  m_GameObject: {fileID: 1785052571972864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d168e1e8c5b2346b359fccdd6d0ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableRecipes:
+  - recipeName: Tomato soup
+    ingredientsArray: []
+  - recipeName: Fruit Salad
+    ingredientsArray: []
+--- !u!114 &114419218928341030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1785052571972864}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fd020c5317c0bd4ca0558e63aac1fa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameState: 0
-  recipes:
-  - {fileID: 11400000, guid: b7a7e363246956740b86f4f47310c41e, type: 2}
-  - {fileID: 11400000, guid: ae91f28cc587a374083eb3a17c5285c1, type: 2}
+  recipes: []
