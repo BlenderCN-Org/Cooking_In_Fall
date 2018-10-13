@@ -13,8 +13,10 @@ namespace FallingCooking
             Cheese,
             Egg,
             Eggplant,
+            Fish,
             Potato,
             Pumpkin,
+            Steak,
         };
 
         //public int[] numberReceipesArray;
