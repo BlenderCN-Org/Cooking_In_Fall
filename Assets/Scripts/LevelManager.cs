@@ -17,9 +17,11 @@ namespace FallingCooking
             Pumpkin,
             Steak,
         };
-         
+
         public static LevelManager instance = null;
-        
+        public  GameObject levelFinishedUI;
+        public GameObject canvasReceipe;
+
         [Header("Recipes for this Level")]
         public List<RecipeTemplate> recipes;
 
@@ -63,7 +65,8 @@ namespace FallingCooking
 
         public void FinishedLevel()
         {
-            Debug.Log("FINISH");
+            levelFinishedUI.SetActive(true);
+            canvasReceipe.SetActive(false);
         }
 
     }

@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd020c5317c0bd4ca0558e63aac1fa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelFinishedUI: {fileID: 0}
+  canvasReceipe: {fileID: 0}
   recipes:
   - {fileID: 11400000, guid: 99186b5e26a50574083dc4e88381516e, type: 2}
-  - {fileID: 11400000, guid: 2dac4553b55dc86479ac36cea0669e7d, type: 2}

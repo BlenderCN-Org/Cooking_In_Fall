@@ -22,6 +22,9 @@ public class RecipeManager : MonoBehaviour {
     [SerializeField]
     private GameObject badEffect;
 
+
+    private bool checkIngredientValue;
+
     //SINGLETON
     private void Awake()
     {
@@ -57,10 +60,14 @@ public class RecipeManager : MonoBehaviour {
             recipesUI.Add(newRecipe);
         }
         currentRecipe = LevelManager.instance.recipes[0];
+        checkIngredientValue = true;
     }
 
     public void IngredientInPan(GameObject ingredient)
     {
+        if (!checkIngredientValue) {
+            return;
+        }
         StartCoroutine(DestroyObject(ingredient, 1.5f));
         // Check ingredient in list
         if (CheckIngredient(ingredient)) //ingredient.GetComponent<Ingredient>().type == GameManager.Type.Egplant
@@ -85,7 +92,9 @@ public class RecipeManager : MonoBehaviour {
             }
 
             // Check if level is complete
-            if (recipesUI.Count == 0) {
+            if (recipesUI.Count == 0)
+            {
+                checkIngredientValue = false;
                 LevelManager.instance.FinishedLevel();
             }
         }

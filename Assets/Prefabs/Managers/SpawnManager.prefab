@@ -53,13 +53,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredients:
   - {fileID: 114571597765724370, guid: 5c2e048c2fc19e94abdaec61cb5769ac, type: 2}
-  - {fileID: 114474126949801724, guid: aeae1012aa73c734998ca8ceca08c7a6, type: 2}
-  - {fileID: 114523801579211252, guid: 2c5974a900993314b892d6b3e14bbc13, type: 2}
-  - {fileID: 114428052053432252, guid: 771926d0f03c6f74e8c9454963f9cbbb, type: 2}
-  - {fileID: 114990660735918090, guid: c7cd25954b81df84dab85b712ba5e8b5, type: 2}
   - {fileID: 114319734375255350, guid: eb78e225b1b586148a929f827d3437b9, type: 2}
-  - {fileID: 114003023605302728, guid: 72ad0b025b62ec14dbb4be1e9b3a8a43, type: 2}
-  - {fileID: 114517475435874616, guid: 471f932da568cf24a86182511445177b, type: 2}
+  - {fileID: 114474126949801724, guid: aeae1012aa73c734998ca8ceca08c7a6, type: 2}
   ingredientsOrder:
   - {fileID: 0}
   - {fileID: 0}
