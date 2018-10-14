@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Pumpking Soup
   m_EditorClassIdentifier: 
   listIngredients:
-  - {fileID: 114553566716345246, guid: 942bbcd4b702695409b9b09762bdaf26, type: 2}
-  - {fileID: 114553566716345246, guid: 942bbcd4b702695409b9b09762bdaf26, type: 2}
+  - {fileID: 114319734375255350, guid: eb78e225b1b586148a929f827d3437b9, type: 2}
+  - {fileID: 114319734375255350, guid: eb78e225b1b586148a929f827d3437b9, type: 2}
