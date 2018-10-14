@@ -347,6 +347,8 @@ MonoBehaviour:
   prefabIngredient: {fileID: 1748396746745792, guid: 866ae5ef26469904cb59d44a715ae016,
     type: 2}
   recipesUI: []
+  goodEffect: {fileID: 1858612726853118, guid: f952cfe301c3ff5409cf51e0e368c055, type: 2}
+  badEffect: {fileID: 1387345781954766, guid: 6634e32d822f64b40a7f3f709c4acf9e, type: 2}
 --- !u!114 &114458738670231344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -752,8 +754,8 @@ RectTransform:
   m_Children:
   - {fileID: 224287346047369162}
   - {fileID: 224782717808720586}
-  - {fileID: 224770620248138378}
   - {fileID: 224823781236358018}
+  - {fileID: 224770620248138378}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -867,7 +869,7 @@ RectTransform:
   m_Children:
   - {fileID: 224636353669851538}
   m_Father: {fileID: 224066756209523850}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -923,7 +925,7 @@ RectTransform:
   m_Children:
   - {fileID: 224078030434741640}
   m_Father: {fileID: 224066756209523850}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}

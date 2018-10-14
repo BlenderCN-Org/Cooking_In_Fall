@@ -15,15 +15,10 @@ public class Pan : MonoBehaviour {
         {
             RecipeManager.recipeManagerInstance.IngredientInPan(other.gameObject);
             cookedIngredient = other.gameObject;
-            Invoke("IngredientTouchedPan", 2);
             currentScore++;
             //score.text = currentScore.ToString("0");
         }
     }
 
 
-    void IngredientTouchedPan()
-    {
-        Destroy(cookedIngredient);
-    }
 }

@@ -16,6 +16,12 @@ public class RecipeManager : MonoBehaviour {
     [HideInInspector]
     public List<GameObject> recipesUI;
 
+
+    [SerializeField]
+    private GameObject goodEffect;
+    [SerializeField]
+    private GameObject badEffect;
+
     //SINGLETON
     private void Awake()
     {
@@ -55,9 +61,14 @@ public class RecipeManager : MonoBehaviour {
 
     public void IngredientInPan(GameObject ingredient)
     {
+        StartCoroutine(DestroyObject(ingredient, 1.5f));
         // Check ingredient in list
         if (CheckIngredient(ingredient)) //ingredient.GetComponent<Ingredient>().type == GameManager.Type.Egplant
         {
+            // Generate Effect
+            GameObject effect = Instantiate(goodEffect,ingredient.transform);
+            StartCoroutine(DestroyObject(effect, 1.5f));
+
             Destroy(recipesUI[0].GetComponent<RecipeUIManager>().ingredientListsUI[0]);
             recipesUI[0].GetComponent<RecipeUIManager>().ingredientListsUI.RemoveAt(0); // remove  UI ingredient
 
@@ -73,6 +84,13 @@ public class RecipeManager : MonoBehaviour {
                 }
             }
         }
+        else
+        {
+            // Generate Effect
+            GameObject effect = Instantiate(badEffect);
+            effect.transform.position = ingredient.transform.position;
+            StartCoroutine(DestroyObject(effect, 2f));
+        }
     }
 
     private bool CheckIngredient(GameObject ingredient) {
@@ -80,5 +98,12 @@ public class RecipeManager : MonoBehaviour {
         result = recipesUI[0].GetComponent<RecipeUIManager>().ingredientListsEnum.Contains(ingredient.GetComponent<Ingredient>().type);
 
         return result;
+    }
+
+
+    IEnumerator DestroyObject(GameObject objectToDestroy, float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        Destroy(objectToDestroy);
     }
 }
