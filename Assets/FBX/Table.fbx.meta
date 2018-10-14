@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: 7f4c54c7e8052c248938a8f37041f52a
+guid: 0356fcc8be07c6949863cfb0ec87af04
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: White
-    2100002: Black
+    2100000: Tige
+    2100002: Main
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Plane
+    4300000: Table
   externalObjects: {}
   materials:
     importMaterials: 1
