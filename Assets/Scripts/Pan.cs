@@ -3,17 +3,11 @@ using UnityEngine.UI;
 
 public class Pan : MonoBehaviour {
 
-    public Text score;
+    public GameObject effects;
+
     private GameObject cookedIngredient;
 
     private int currentScore;
-
-	// Use this for initialization
-	void Start ()
-    {
-        currentScore = 0;
-        //score.text = currentScore.ToString("0");
-    }
 
     private void OnTriggerEnter(Collider other)
     {
