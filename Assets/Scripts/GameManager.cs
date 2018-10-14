@@ -10,6 +10,9 @@ namespace FallingCooking
         public enum gameStates { Playing, End };
         public gameStates gameState = gameStates.Playing;
 
+        public GameObject gameMenu;
+        public GameObject levelSelector;
+
         public static GameManager instance = null;
 
         void Awake()
@@ -17,18 +20,32 @@ namespace FallingCooking
             if (instance == null)
             {
                 instance = this;
-                DontDestroyOnLoad(this);
             }
-            else
+            else if (instance != this)
             {
-                Destroy(this);
+                Destroy(gameObject);
             }
+            DontDestroyOnLoad(this.gameObject);
         }
 
         // Use this for initialization
         void Start()
         {
 
+        }
+
+
+        public void Play()
+        {
+            gameMenu.SetActive(false);
+            levelSelector.SetActive(true);
+        }
+
+
+        public void Menu()
+        {
+            gameMenu.SetActive(true);
+            levelSelector.SetActive(false);
         }
 
         public void LoadScene(string scene)
@@ -39,6 +56,11 @@ namespace FallingCooking
         public void ReloadScene()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        public void Quit()
+        {
+            Application.Quit();
         }
     }
 }

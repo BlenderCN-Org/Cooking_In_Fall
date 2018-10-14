@@ -76,8 +76,12 @@ public class RecipeManager : MonoBehaviour {
             GameObject effect = Instantiate(goodEffect,ingredient.transform);
             StartCoroutine(DestroyObject(effect, 1.5f));
 
-            Destroy(recipesUI[0].GetComponent<RecipeUIManager>().ingredientListsUI[0]);
-            recipesUI[0].GetComponent<RecipeUIManager>().ingredientListsUI.RemoveAt(0); // remove  UI ingredient
+            // Find Ui ingredient
+            GameObject uiToremove = recipesUI[0].GetComponent<RecipeUIManager>().ingredientListsUI.Find(x => x.GetComponent<Image>().sprite == ingredient.GetComponent<Ingredient>().icon); 
+            Destroy(uiToremove); // Destroy ingredient UI
+            recipesUI[0].GetComponent<RecipeUIManager>().ingredientListsUI.Remove(uiToremove); // remove  UI ingredient in the list
+
+            recipesUI[0].GetComponent<RecipeUIManager>().ingredientListsEnum.Remove(ingredient.GetComponent<Ingredient>().type); // remove  ingredient in Recipe
 
             // Check if Recipe is complete
             if (recipesUI[0].GetComponent<RecipeUIManager>().ingredientListsUI.Count == 0) // If there is no more ingredients in recipe

@@ -270,6 +270,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114118756672564692, guid: eaa4d0377b8470f41bb2067112ece82e,
+        type: 2}
+      propertyPath: recipes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4064052556238982, guid: eaa4d0377b8470f41bb2067112ece82e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -312,6 +317,24 @@ Prefab:
       propertyPath: canvasReceipe
       value: 
       objectReference: {fileID: 716366101}
+    - target: {fileID: 114118756672564692, guid: eaa4d0377b8470f41bb2067112ece82e,
+        type: 2}
+      propertyPath: recipes.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 77ad1a7babf2c244081f5912c9f35617,
+        type: 2}
+    - target: {fileID: 114118756672564692, guid: eaa4d0377b8470f41bb2067112ece82e,
+        type: 2}
+      propertyPath: recipes.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: dfa1ebbaf2c631141a1cb4307448fbee,
+        type: 2}
+    - target: {fileID: 114118756672564692, guid: eaa4d0377b8470f41bb2067112ece82e,
+        type: 2}
+      propertyPath: recipes.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8b72a9e895353254f8bc02e6d246eae8,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaa4d0377b8470f41bb2067112ece82e, type: 2}
   m_IsPrefabAsset: 0
