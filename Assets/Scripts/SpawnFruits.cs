@@ -17,6 +17,7 @@ public class SpawnFruits : MonoBehaviour {
 
     [Header("Settings")]
     public float reloadTime;
+    public float turnForce = 40;
     public Transform spawnPoint;
 
     [Space(15)]
@@ -44,7 +45,11 @@ public class SpawnFruits : MonoBehaviour {
 
         if (canSpawn)
         {
-            Instantiate(ingredientsOrder[0], spawnPoint.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
+            // Instantiate Ingredient and apply a torque
+            Ingredient ingredient;
+            ingredient = Instantiate(ingredientsOrder[0], spawnPoint.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
+            Vector3 directionTorque = new Vector3(Random.Range(0f,1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+            ingredient.gameObject.GetComponent<Rigidbody>().AddTorque(directionTorque * turnForce);
 
             // Update Order
             ingredientsOrder[0] = ingredientsOrder[1];

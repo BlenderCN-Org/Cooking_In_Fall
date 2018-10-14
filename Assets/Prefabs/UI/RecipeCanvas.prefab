@@ -64,6 +64,8 @@ MonoBehaviour:
   prefabIngredient: {fileID: 1748396746745792, guid: 866ae5ef26469904cb59d44a715ae016,
     type: 2}
   recipesUI: []
+  goodEffect: {fileID: 1858612726853118, guid: f952cfe301c3ff5409cf51e0e368c055, type: 2}
+  badEffect: {fileID: 1387345781954766, guid: 6634e32d822f64b40a7f3f709c4acf9e, type: 2}
 --- !u!114 &114306485304565664
 MonoBehaviour:
   m_ObjectHideFlags: 1
