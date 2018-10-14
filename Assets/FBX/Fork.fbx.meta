@@ -1,18 +1,14 @@
 fileFormatVersion: 2
-guid: af8149ad6b8f176429a653cb91d6f8cc
+guid: e589d69933218fb4183368638836e602
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Peau
-    2100002: Taches
+    2100000: White
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Potato
-    7400000: Default Take
-    9500000: //RootNode
-    2186277476908879412: ImportLogs
+    4300000: Fork
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -65,7 +61,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -90,7 +86,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

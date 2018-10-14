@@ -1,18 +1,15 @@
 fileFormatVersion: 2
-guid: d0bbcedc0c7b3214cbdf06008bfee4ed
+guid: 02db6fd4a5a69e64fbce33bf105f137b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Orange
-    2100002: Tige
+    2100000: White
+    2100002: Black
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Pumpkin
-    7400000: Default Take
-    9500000: //RootNode
-    2186277476908879412: ImportLogs
+    4300000: Plane
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -65,7 +62,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -90,7 +87,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

@@ -1,17 +1,15 @@
 fileFormatVersion: 2
-guid: 0087353fb9d4e4848a15861878b5b9fe
+guid: 670342baf800843428f715edfbc7c138
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Egg_Color
+    2100000: White
+    2100002: Black
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Egg
-    7400000: Default Take
-    9500000: //RootNode
-    2186277476908879412: ImportLogs
+    4300000: Salt
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -64,7 +62,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -89,7 +87,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

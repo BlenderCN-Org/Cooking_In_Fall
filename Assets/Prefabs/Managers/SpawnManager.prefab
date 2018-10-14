@@ -58,6 +58,8 @@ MonoBehaviour:
   - {fileID: 114428052053432252, guid: 771926d0f03c6f74e8c9454963f9cbbb, type: 2}
   - {fileID: 114990660735918090, guid: c7cd25954b81df84dab85b712ba5e8b5, type: 2}
   - {fileID: 114553566716345246, guid: 942bbcd4b702695409b9b09762bdaf26, type: 2}
+  - {fileID: 114003023605302728, guid: 72ad0b025b62ec14dbb4be1e9b3a8a43, type: 2}
+  - {fileID: 114517475435874616, guid: 471f932da568cf24a86182511445177b, type: 2}
   ingredientsOrder:
   - {fileID: 0}
   - {fileID: 0}

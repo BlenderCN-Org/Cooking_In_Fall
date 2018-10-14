@@ -1,18 +1,16 @@
 fileFormatVersion: 2
-guid: bc0f47477b48577409384e82a995b884
+guid: f9cee1c84dae8204b8002755a9c5dcba
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Purple
-    2100002: Green
+    2100000: Black
+    2100002: Grey
+    2100004: Red
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Aubergine
-    7400000: Default Take
-    9500000: //RootNode
-    2186277476908879412: ImportLogs
+    4300000: BigPan
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -65,7 +63,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -90,7 +88,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
