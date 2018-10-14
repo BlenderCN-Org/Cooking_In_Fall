@@ -6,28 +6,11 @@ namespace FallingCooking
 {
     public class GameManager : MonoBehaviour
     {
-        public enum Type // Ingredient Type
-        {
-            Apricot,
-            Cheese,
-            Egg,
-            Eggplant,
-            Fish,
-            Potato,
-            Pumpkin,
-            Steak,
-        };
-
-        //public int[] numberReceipesArray;
-        //public Receipe[] gameRecipes; 
-
-        public static GameManager instance = null;
 
         public enum gameStates { Playing, End };
         public gameStates gameState = gameStates.Playing;
-        
-        [Header("Recipes for this Level")]
-        public List<RecipeTemplate> recipes;
+
+        public static GameManager instance = null;
 
         void Awake()
         {
@@ -42,19 +25,10 @@ namespace FallingCooking
             }
         }
 
-        public void Start()
+        // Use this for initialization
+        void Start()
         {
-            //if (numberReceipesArray.Length != 0)
-            //{
-            //    gameRecipes = new Receipe[numberReceipesArray.Length];
-            //    for (int i = 0; i < gameRecipes.Length; i++)
-            //    {
-            //        gameRecipes[i] = this.GetComponent<ReceipeTemplate>().availableRecipes[numberReceipesArray[i]];
-            //    }
-            //}
-            //else {
-            //    Debug.Log("Empty numberReceipesArray");
-            //}
+
         }
 
         public void LoadScene(string scene)
@@ -66,7 +40,5 @@ namespace FallingCooking
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-
     }
 }
-

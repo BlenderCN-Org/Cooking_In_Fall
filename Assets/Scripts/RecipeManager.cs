@@ -41,7 +41,7 @@ public class RecipeManager : MonoBehaviour {
     private void Start () {
 
         // Init UI
-        foreach (RecipeTemplate recipe in GameManager.instance.recipes) // Create ingredients
+        foreach (RecipeTemplate recipe in LevelManager.instance.recipes) // Create ingredients
         {
             GameObject newRecipe = Instantiate(prefabRecipeUI, this.transform);
             newRecipe.transform.Find("Name").GetComponent<Text>().text = recipe.name; // Replace recipe name
@@ -56,7 +56,7 @@ public class RecipeManager : MonoBehaviour {
             }
             recipesUI.Add(newRecipe);
         }
-        currentRecipe = GameManager.instance.recipes[0];
+        currentRecipe = LevelManager.instance.recipes[0];
     }
 
     public void IngredientInPan(GameObject ingredient)
@@ -77,11 +77,16 @@ public class RecipeManager : MonoBehaviour {
             {
                 Destroy(recipesUI[0]);
                 recipesUI.RemoveAt(0);
-                GameManager.instance.recipes.RemoveAt(0);
-                if (GameManager.instance.recipes.Count != 0)
+                LevelManager.instance.recipes.RemoveAt(0);
+                if (LevelManager.instance.recipes.Count != 0)
                 {
-                    currentRecipe = GameManager.instance.recipes[0];
+                    currentRecipe = LevelManager.instance.recipes[0];
                 }
+            }
+
+            // Check if level is complete
+            if (recipesUI.Count == 0) {
+                LevelManager.instance.FinishedLevel();
             }
         }
         else

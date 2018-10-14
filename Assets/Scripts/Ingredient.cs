@@ -4,6 +4,6 @@ using UnityEngine.UI;
 
 public class Ingredient : MonoBehaviour
 {
-    public GameManager.Type type;
+    public LevelManager.Type type;
     public Sprite icon;
 }
