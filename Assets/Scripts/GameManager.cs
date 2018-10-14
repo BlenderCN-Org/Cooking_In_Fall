@@ -9,7 +9,6 @@ namespace FallingCooking
         public enum Type // Ingredient Type
         {
             Apricot,
-            Aubergine,
             Cheese,
             Egg,
             Eggplant,

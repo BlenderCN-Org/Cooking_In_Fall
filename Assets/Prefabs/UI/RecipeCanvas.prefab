@@ -59,9 +59,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44cfdfc0a70db174f80977f0a1062d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabRecipeUI: {fileID: 1761594690437494, guid: 0d92d15f03b3d204b981097c4ca7781c,
+  prefabRecipeUI: {fileID: 1870112777502434, guid: 0d92d15f03b3d204b981097c4ca7781c,
     type: 2}
-  prefabIngredient: {fileID: 1266038006329480, guid: 866ae5ef26469904cb59d44a715ae016,
+  prefabIngredient: {fileID: 1748396746745792, guid: 866ae5ef26469904cb59d44a715ae016,
     type: 2}
   recipesUI: []
 --- !u!114 &114306485304565664
@@ -212,5 +212,5 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 148.91, y: 0}
+  m_SizeDelta: {x: 221.1, y: 0}
   m_Pivot: {x: 1, y: 0.5}

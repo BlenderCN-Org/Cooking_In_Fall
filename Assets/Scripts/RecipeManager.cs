@@ -13,6 +13,7 @@ public class RecipeManager : MonoBehaviour {
     public GameObject prefabIngredient;
 
     private RecipeTemplate currentRecipe;
+    [HideInInspector]
     public List<GameObject> recipesUI;
 
     //SINGLETON
@@ -36,14 +37,14 @@ public class RecipeManager : MonoBehaviour {
         // Init UI
         foreach (RecipeTemplate recipe in GameManager.instance.recipes) // Create ingredients
         {
-           GameObject newRecipe = Instantiate(prefabRecipeUI, this.transform);
+            GameObject newRecipe = Instantiate(prefabRecipeUI, this.transform);
             newRecipe.transform.Find("Name").GetComponent<Text>().text = recipe.name; // Replace recipe name
             parentIngredients = newRecipe.transform.Find("Ingredients");
             // Init UI for ingredients
             foreach (Ingredient ing in recipe.listIngredients)
             {
                 GameObject newIng = Instantiate(prefabIngredient, parentIngredients);
-                newIng.transform.GetChild(0).GetComponent<Text>().text = ing.type.ToString();
+                newIng.GetComponent<Image>().sprite = ing.icon;
                 newRecipe.GetComponent<RecipeUIManager>().ingredientListsUI.Add(newIng);
                 newRecipe.GetComponent<RecipeUIManager>().ingredientListsEnum.Add(ing.type);
             }

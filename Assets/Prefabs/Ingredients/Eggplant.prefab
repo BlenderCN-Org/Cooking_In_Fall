@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 54130893709370056}
   - component: {fileID: 114474126949801724}
   m_Layer: 0
-  m_Name: Aubergine
+  m_Name: Eggplant
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,4 +127,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f665ffa05a8b574baa666a4694a39a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+  type: 3
+  icon: {fileID: 21300000, guid: 2d298c083eac67f4c95ddec0bb20382c, type: 3}
