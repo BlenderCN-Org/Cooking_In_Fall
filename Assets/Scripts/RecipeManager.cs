@@ -73,8 +73,9 @@ public class RecipeManager : MonoBehaviour {
         if (CheckIngredient(ingredient)) //ingredient.GetComponent<Ingredient>().type == GameManager.Type.Egplant
         {
             // Generate Effect
-            GameObject effect = Instantiate(goodEffect,ingredient.transform);
-            StartCoroutine(DestroyObject(effect, 1.5f));
+            GameObject effect = Instantiate(goodEffect);
+            effect.transform.position = ingredient.transform.position;
+            StartCoroutine(DestroyObject(effect, 2f));
 
             // Find Ui ingredient
             GameObject uiToremove = recipesUI[0].GetComponent<RecipeUIManager>().ingredientListsUI.Find(x => x.GetComponent<Image>().sprite == ingredient.GetComponent<Ingredient>().icon); 

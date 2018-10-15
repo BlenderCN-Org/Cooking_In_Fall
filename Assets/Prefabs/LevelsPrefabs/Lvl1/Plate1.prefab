@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  minimum: -2
-  maximum: 2
+  minimum: -3
+  maximum: 3
   speed: 0.5
   smoothTime: 0.3

@@ -55,14 +55,7 @@ public class Pan : MonoBehaviour {
             RecipeManager.recipeManagerInstance.IngredientInPan(cookedIngredient);
             Destroy(cookedIngredient);
             cookedIngredient = null;
-            //Invoke("IngredientTouchedPan", 2);
         }
-        else
-            Debug.Log("Ingredient has exit");
-    }
-    void IngredientTouchedPan()
-    {
-        Destroy(cookedIngredient);
     }
 
 

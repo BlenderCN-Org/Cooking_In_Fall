@@ -17,7 +17,6 @@ namespace FallingCooking
  
         void Awake()
         {
-            Debug.Log("Awake");
             menuPanel = GameObject.Find("CanvasMenu/MenuPanel");
             levelSelector = GameObject.Find("CanvasMenu/Lvl Selector");
             levelSelector.SetActive(false); // Because uniyt can't find inactive object LOL
