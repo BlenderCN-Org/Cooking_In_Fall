@@ -21,12 +21,16 @@ namespace FallingCooking
         public static LevelManager instance = null;
         public  GameObject levelFinishedUI;
         public GameObject canvasReceipe;
+        public GameObject pauseUI;
 
-        [Header("Recipes for this Level")]
+         [Header("Recipes for this Level")]
         public List<RecipeTemplate> recipes;
+
+        public bool pauseState;
 
         void Awake()
         {
+            pauseState = false;
             if (instance == null)
             {
                 instance = this;
@@ -38,19 +42,17 @@ namespace FallingCooking
         }
 
         public void Start()
+        {}
+
+
+        private void Update()
         {
-            //if (numberReceipesArray.Length != 0)
-            //{
-            //    gameRecipes = new Receipe[numberReceipesArray.Length];
-            //    for (int i = 0; i < gameRecipes.Length; i++)
-            //    {
-            //        gameRecipes[i] = this.GetComponent<ReceipeTemplate>().availableRecipes[numberReceipesArray[i]];
-            //    }
-            //}
-            //else {
-            //    Debug.Log("Empty numberReceipesArray");
-            //}
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Pause();
+            }
         }
+
 
         public void LoadScene(string scene)
         {
@@ -68,6 +70,26 @@ namespace FallingCooking
             canvasReceipe.SetActive(false);
         }
 
+        private void Pause()
+        {
+            if (!pauseState)
+            {
+                pauseState = true;
+                Time.timeScale = 0;
+                pauseUI.SetActive(true);
+            }
+            else
+            {
+                pauseState = false;
+                Time.timeScale = 1;
+                pauseUI.SetActive(false);
+            }
+        }
+
+        public void QuitGame()
+        {
+            Application.Quit();
+        }
     }
 }
 
