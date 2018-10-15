@@ -53,6 +53,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelFinishedUI: {fileID: 0}
   canvasReceipe: {fileID: 0}
+  pauseUI: {fileID: 0}
   recipes:
   - {fileID: 11400000, guid: 00b5aec7e904b8e499022e4e3546b301, type: 2}
   - {fileID: 11400000, guid: dfa1ebbaf2c631141a1cb4307448fbee, type: 2}
+  pauseState: 0

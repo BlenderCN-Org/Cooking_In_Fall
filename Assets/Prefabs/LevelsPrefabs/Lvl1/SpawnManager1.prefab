@@ -66,4 +66,4 @@ MonoBehaviour:
   reloadTime: 2
   turnForce: 40
   spawnPoint: {fileID: 0}
-  buttonText: {fileID: 0}
+  spawnButtonText: {fileID: 0}

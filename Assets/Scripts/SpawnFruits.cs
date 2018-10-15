@@ -21,7 +21,7 @@ public class SpawnFruits : MonoBehaviour {
     public Transform spawnPoint;
 
     [Space(15)]
-    public Text buttonText;
+    public Text spawnButtonText;
 
     private float _reloadTime;
     private bool canSpawn = true;
@@ -38,7 +38,7 @@ public class SpawnFruits : MonoBehaviour {
             orders[i].text = ingredientsOrder[i].name;
         }
 
-        buttonText.text = "Launch";
+        spawnButtonText.text = "Launch";
 	}
 
     public void Spawn() {
@@ -73,18 +73,18 @@ public class SpawnFruits : MonoBehaviour {
 
         // On affiche le temps sur le boouton
         _reloadTime = reloadTime;
-        buttonText.text = _reloadTime.ToString("0");
+        spawnButtonText.text = _reloadTime.ToString("0");
 
         while (_reloadTime > 0)
         {
             yield return new WaitForSeconds(1f);
             _reloadTime -= 1;
-            buttonText.text = _reloadTime.ToString("0");
+            spawnButtonText.text = _reloadTime.ToString("0");
         }
 
         // Spawn de nouveau possible
         canSpawn = true;
-        buttonText.text = "Launch";
+        spawnButtonText.text = "Launch";
         yield break;
     }
 }
