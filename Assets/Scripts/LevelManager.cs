@@ -30,7 +30,6 @@ namespace FallingCooking
             if (instance == null)
             {
                 instance = this;
-                DontDestroyOnLoad(this);
             }
             else
             {

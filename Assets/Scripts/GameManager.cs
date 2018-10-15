@@ -10,13 +10,17 @@ namespace FallingCooking
         public enum gameStates { Playing, End };
         public gameStates gameState = gameStates.Playing;
 
-        public GameObject gameMenu;
-        public GameObject levelSelector;
+        private GameObject menuPanel;
+        private GameObject levelSelector;
 
         public static GameManager instance = null;
-
+ 
         void Awake()
         {
+            Debug.Log("Awake");
+            menuPanel = GameObject.Find("CanvasMenu/MenuPanel");
+            levelSelector = GameObject.Find("CanvasMenu/Lvl Selector");
+            levelSelector.SetActive(false); // Because uniyt can't find inactive object LOL
             if (instance == null)
             {
                 instance = this;
@@ -31,20 +35,20 @@ namespace FallingCooking
         // Use this for initialization
         void Start()
         {
-
+            Debug.Log("start");
         }
 
 
         public void Play()
         {
-            gameMenu.SetActive(false);
+            menuPanel.SetActive(false);
             levelSelector.SetActive(true);
         }
 
 
         public void Menu()
         {
-            gameMenu.SetActive(true);
+            menuPanel.SetActive(true);
             levelSelector.SetActive(false);
         }
 
