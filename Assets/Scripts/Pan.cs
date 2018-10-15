@@ -56,6 +56,10 @@ public class Pan : MonoBehaviour {
             Destroy(cookedIngredient);
             cookedIngredient = null;
         }
+        else
+        {
+            cookedIngredientInPan = false;
+        }
     }
 
 
