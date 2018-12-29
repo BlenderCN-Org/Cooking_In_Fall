@@ -8,6 +8,6 @@ It is a timing game, where you need to complete all recipes, by lauching at the 
 You can play the game [here](https://pemdora.itch.io/cooking-in-fall)
 
 # Credits
-Tara Zhong (Game programmer)
+Tara Zhong (Game programmer & 2D drawing)
 
 Sébastien Gaumin (Game programmer & 3D modeling)
