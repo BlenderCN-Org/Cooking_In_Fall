@@ -11,3 +11,11 @@ You can play the game [here](https://pemdora.itch.io/cooking-in-fall)
 Tara Zhong (Game programmer & 2D drawing)
 
 Sébastien Gaumin (Game programmer & 3D modeling)
+
+# Dependencies
+Package [Post Processing Stack](https://assetstore.unity.com/packages/essentials/post-processing-stack-83912)
+
+# Ressources
+Music and Sounds found on https://freesound.org/
+
+Fonts found on https://www.dafont.com/fr/
