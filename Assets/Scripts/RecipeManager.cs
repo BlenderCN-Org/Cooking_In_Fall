@@ -4,25 +4,18 @@ using UnityEngine;
 using FallingCooking;
 using UnityEngine.UI;
 
-public class RecipeManager : MonoBehaviour {
-
+public class RecipeManager : MonoBehaviour
+{
     public static RecipeManager recipeManagerInstance;
+
     public GameObject prefabRecipeUI;
-
-    private Transform parentIngredients;
     public GameObject prefabIngredient;
+    [HideInInspector] public List<GameObject> recipesUI;
 
+    [SerializeField] private GameObject goodEffect;
+    [SerializeField] private GameObject badEffect;
     private RecipeTemplate currentRecipe;
-    [HideInInspector]
-    public List<GameObject> recipesUI;
-
-
-    [SerializeField]
-    private GameObject goodEffect;
-    [SerializeField]
-    private GameObject badEffect;
-
-
+    private Transform parentIngredients;
     private bool checkIngredientValue;
 
     //SINGLETON
@@ -41,7 +34,8 @@ public class RecipeManager : MonoBehaviour {
         //DontDestroyOnLoad(recipeManagerInstance); // We keep one instance for music that should never be destroyed
     }
     // Use this for initialization
-    private void Start () {
+    private void Start()
+    {
 
         // Init UI
         foreach (RecipeTemplate recipe in LevelManager.instance.recipes) // Create ingredients
@@ -65,7 +59,8 @@ public class RecipeManager : MonoBehaviour {
 
     public void IngredientInPan(GameObject ingredient)
     {
-        if (!checkIngredientValue) {
+        if (!checkIngredientValue)
+        {
             return;
         }
         StartCoroutine(DestroyObject(ingredient, 1.5f));
@@ -78,7 +73,7 @@ public class RecipeManager : MonoBehaviour {
             StartCoroutine(DestroyObject(effect, 2f));
 
             // Find Ui ingredient
-            GameObject uiToremove = recipesUI[0].GetComponent<RecipeUIManager>().ingredientListsUI.Find(x => x.GetComponent<Image>().sprite == ingredient.GetComponent<Ingredient>().icon); 
+            GameObject uiToremove = recipesUI[0].GetComponent<RecipeUIManager>().ingredientListsUI.Find(x => x.GetComponent<Image>().sprite == ingredient.GetComponent<Ingredient>().icon);
             Destroy(uiToremove); // Destroy ingredient UI
             recipesUI[0].GetComponent<RecipeUIManager>().ingredientListsUI.Remove(uiToremove); // remove  UI ingredient in the list
 
@@ -112,7 +107,8 @@ public class RecipeManager : MonoBehaviour {
         }
     }
 
-    private bool CheckIngredient(GameObject ingredient) {
+    private bool CheckIngredient(GameObject ingredient)
+    {
         bool result = false;
         result = recipesUI[0].GetComponent<RecipeUIManager>().ingredientListsEnum.Contains(ingredient.GetComponent<Ingredient>().type);
 
