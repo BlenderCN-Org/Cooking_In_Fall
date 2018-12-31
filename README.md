@@ -7,13 +7,16 @@ It is a timing game, where you need to complete all recipes, by lauching at the 
 
 You can play the game [here](https://pemdora.itch.io/cooking-in-fall)
 
+# Getting Started
+You can download the project and open it on your local machine with Unity 2018.3
+
 # Credits
 Tara Zhong (Game programmer & 2D drawing)
 
 Sébastien Gaumin (Game programmer & 3D modeling)
 
 # Dependencies
-Package [Post Processing Stack](https://assetstore.unity.com/packages/essentials/post-processing-stack-83912)
+You need to import the package [Post Processing Stack](https://assetstore.unity.com/packages/essentials/post-processing-stack-83912)
 
 # Ressources
 Music and Sounds found on https://freesound.org/
