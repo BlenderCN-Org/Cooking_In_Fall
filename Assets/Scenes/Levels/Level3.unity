@@ -1392,7 +1392,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1267086020913182, guid: f2fbf965c40b10d469cc7631587936c5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4940078384216100, guid: f2fbf965c40b10d469cc7631587936c5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3499,8 +3499,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 114085137440431048, guid: f04fc72a891e404458d9154a5bcf690b,
-        type: 2}
+      objectReference: {fileID: 1925231167}
+    - target: {fileID: 114468216171694044, guid: 268c8bc0c87b32c4688070f43dbf9171,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 114468216171694044, guid: 268c8bc0c87b32c4688070f43dbf9171,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114166993581937764, guid: 268c8bc0c87b32c4688070f43dbf9171,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
