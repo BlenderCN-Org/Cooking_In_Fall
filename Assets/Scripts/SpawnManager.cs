@@ -2,15 +2,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SpawnFruits : MonoBehaviour {
+public class SpawnManager : MonoBehaviour {
 
     [Header("All Ingredients List")]
     // On récupère tout les prefabs ingredients
     public Ingredient[] ingredients;
 
-    [Header("Current Order Spawning")]
     // On crée notre liste d'attente
-    public Ingredient[] ingredientsOrder = new Ingredient[3];
+    [HideInInspector] public Ingredient[] ingredientsOrder = new Ingredient[3];
 
     [Header("Texts Order Spawning")]
     public Text[] orders = new Text[3];

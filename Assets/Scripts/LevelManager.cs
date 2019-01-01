@@ -40,10 +40,6 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void Start()
-    { }
-
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
