@@ -18,7 +18,7 @@ Sébastien Gaumin (Game programmer & 3D modeling)
 # Dependencies
 You need to import the package [Post Processing Stack](https://assetstore.unity.com/packages/essentials/post-processing-stack-83912)
 
-# Ressources
-Music and Sounds found on https://freesound.org/
+# Assets
+Music and Sounds found on [Freesound](https://freesound.org/)
 
-Fonts found on https://www.dafont.com/fr/
+Fonts found on [DaFont](https://www.dafont.com/fr/)
