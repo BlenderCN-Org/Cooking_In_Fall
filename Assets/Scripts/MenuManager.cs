@@ -1,36 +1,17 @@
-﻿using FallingCooking;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour {
-    [SerializeField]
-    private GameObject menuPanel;
-    [SerializeField]
-    private GameObject levelSelector;
+    public static bool menuState = true;
 
-    // Use this for initialization
-    private void Awake()
-    {
-        if (GameManager.menuState)
-        {
-            menuPanel.SetActive(true);
-            levelSelector.SetActive(false);
-        }
-        else
-        {
-            menuPanel.SetActive(false);
-            levelSelector.SetActive(true);
-        }
-    }
+    [SerializeField] private GameObject menuPanel;
+    [SerializeField] private GameObject levelSelector;
 
     public void Play()
     {
         menuPanel.SetActive(false);
         levelSelector.SetActive(true);
     }
-
 
     public void Menu()
     {

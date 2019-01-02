@@ -6,13 +6,11 @@ namespace FallingCooking
 {
     public class GameManager : MonoBehaviour
     {
-
-        public enum gameStates { Playing, End };
-        public gameStates gameState = gameStates.Playing;
+        //public enum gameStates { Playing, End };
+        //public gameStates gameState = gameStates.Playing;
 
         public static GameManager instance = null;
-        public static bool menuState = true;
-
+        
         void Awake()
         {
             if (instance == null)
@@ -25,9 +23,6 @@ namespace FallingCooking
             }
             DontDestroyOnLoad(this.gameObject);
         }
-        
-        void Start()
-        {}
 
         public void LoadScene(string scene)
         {
@@ -38,11 +33,5 @@ namespace FallingCooking
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-
-        public void ChangeMenuState(bool value)
-        {
-            menuState = value;
-        }
-
     }
 }

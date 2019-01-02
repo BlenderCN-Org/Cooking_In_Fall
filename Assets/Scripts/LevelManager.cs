@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using FallingCooking;
 
 public class LevelManager : MonoBehaviour
 {
@@ -30,14 +29,7 @@ public class LevelManager : MonoBehaviour
     void Awake()
     {
         pauseState = false;
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(this);
-        }
+        instance = this;
     }
 
     private void Update()
@@ -48,7 +40,6 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-
     public void LoadScene(string scene)
     {
         SceneManager.LoadScene(scene);
@@ -58,8 +49,6 @@ public class LevelManager : MonoBehaviour
     {
         pauseState = false;
         Time.timeScale = 1;
-        pauseUI.SetActive(false);
-        GameManager.instance.ChangeMenuState(false);
         SceneManager.LoadScene("Menu");
     }
 
@@ -67,7 +56,6 @@ public class LevelManager : MonoBehaviour
     {
         pauseState = false;
         Time.timeScale = 1;
-        pauseUI.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -98,4 +86,3 @@ public class LevelManager : MonoBehaviour
         Application.Quit();
     }
 }
-

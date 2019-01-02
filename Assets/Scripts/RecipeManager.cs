@@ -14,7 +14,7 @@ public class RecipeManager : MonoBehaviour
 
     [SerializeField] private GameObject goodEffect;
     [SerializeField] private GameObject badEffect;
-    private RecipeTemplate currentRecipe;
+    //private RecipeTemplate currentRecipe;
     private Transform parentIngredients;
     private bool checkIngredientValue;
 
@@ -53,7 +53,7 @@ public class RecipeManager : MonoBehaviour
             }
             recipesUI.Add(newRecipe);
         }
-        currentRecipe = LevelManager.instance.recipes[0];
+        //currentRecipe = LevelManager.instance.recipes[0];
         checkIngredientValue = true;
     }
 
@@ -87,7 +87,7 @@ public class RecipeManager : MonoBehaviour
                 LevelManager.instance.recipes.RemoveAt(0);
                 if (LevelManager.instance.recipes.Count != 0)
                 {
-                    currentRecipe = LevelManager.instance.recipes[0];
+                    //currentRecipe = LevelManager.instance.recipes[0];
                 }
             }
 
