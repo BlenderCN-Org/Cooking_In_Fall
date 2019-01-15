@@ -558,6 +558,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: RetourButton
       objectReference: {fileID: 0}
+    - target: {fileID: 8278944487573993605, guid: 12a42e190537b1d46b2ff1e601b84b42,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645325036784975924, guid: 12a42e190537b1d46b2ff1e601b84b42,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645310323351711026, guid: 12a42e190537b1d46b2ff1e601b84b42,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowLevelSelector
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645324199845929354, guid: 12a42e190537b1d46b2ff1e601b84b42,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645653067373760616, guid: 12a42e190537b1d46b2ff1e601b84b42,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645442505627378344, guid: 12a42e190537b1d46b2ff1e601b84b42,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowMenuScreen
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12a42e190537b1d46b2ff1e601b84b42, type: 3}
 --- !u!224 &5750892820930276210 stripped

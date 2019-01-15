@@ -564,6 +564,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 227752976, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: ingredients.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 227752976, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
       propertyPath: spawnButtonText
       value: 
       objectReference: {fileID: 965403410538633133}
@@ -579,6 +583,36 @@ PrefabInstance:
       propertyPath: orders.Array.data[2]
       value: 
       objectReference: {fileID: 965403410538633134}
+    - target: {fileID: 227752976, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: ingredients.Array.data[0]
+      value: 
+      objectReference: {fileID: 114474126949801724, guid: aeae1012aa73c734998ca8ceca08c7a6,
+        type: 3}
+    - target: {fileID: 227752976, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: ingredients.Array.data[1]
+      value: 
+      objectReference: {fileID: 114319734375255350, guid: eb78e225b1b586148a929f827d3437b9,
+        type: 3}
+    - target: {fileID: 227752976, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: ingredients.Array.data[2]
+      value: 
+      objectReference: {fileID: 114517475435874616, guid: 471f932da568cf24a86182511445177b,
+        type: 3}
+    - target: {fileID: 227752976, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: ingredients.Array.data[3]
+      value: 
+      objectReference: {fileID: 114990660735918090, guid: c7cd25954b81df84dab85b712ba5e8b5,
+        type: 3}
+    - target: {fileID: 227752976, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: ingredients.Array.data[4]
+      value: 
+      objectReference: {fileID: 114523801579211252, guid: 2c5974a900993314b892d6b3e14bbc13,
+        type: 3}
+    - target: {fileID: 227752976, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: ingredients.Array.data[5]
+      value: 
+      objectReference: {fileID: 114319734375255350, guid: eb78e225b1b586148a929f827d3437b9,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
 --- !u!114 &227752976 stripped
@@ -4270,19 +4304,6 @@ MonoBehaviour:
   maximum: 2
   speed: 0.5
   smoothTime: 0.3
---- !u!114 &2654707438729147576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2685650713282403576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b51be6a2e509c41bcde5e976cb380c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  power: 10
 --- !u!114 &2655384414757770898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4422,7 +4443,6 @@ GameObject:
   - component: {fileID: 2681701305993671350}
   - component: {fileID: 2672078143272938256}
   - component: {fileID: 2712555344332818890}
-  - component: {fileID: 2654707438729147576}
   - component: {fileID: 2655384414757770898}
   m_Layer: 0
   m_Name: PlatebUmp

@@ -1,35 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-[SerializeField]
-public class PlateformDeplacement : MonoBehaviour {
+public class PlateformDeplacement : MonoBehaviour
+{
+    public enum TypeOfDeplacement { None, Horizontal, Vertical, DiagonalLeftToRight, DiagonalRightToLeft };
 
-    [SerializeField]
-    public enum TypeOfDeplacement {None, Horizontal, Vertical, DiagonalLeftToRight, DiagonalRightToLeft };
+    [SerializeField] private TypeOfDeplacement direction; // down or left by default
 
-    [SerializeField]
-    private TypeOfDeplacement direction; // down or left by default
+    [SerializeField] private float minimum = -1.0F;
+    [SerializeField] private float maximum = 1.0F;
+    [SerializeField] private float speed = 0.5f;
+    [SerializeField] private float smoothTime = 0.3F; //Damp values
 
-    // animate the game object from -1 to +1 and back => move first towards min value
-    public float minimum = -1.0F;
-    public float maximum = 1.0F;
-
-    public float speed = 0.5f;
-    // starting value for the Lerp
     private float t = 0.0f;
-
-    //Damp values
-    public float smoothTime = 0.3F;
     private Vector3 velocity = Vector3.zero;
-
     private Vector3 targetPosition;
-    
-	// Update is called once per frame
-	void Update ()
-    {
-        // transform.position = new Vector3(Mathf.Lerp(minimum, maximum, t), 0, 0); => Default movment
 
+    // Update is called once per frame
+    void Update()
+    {
         targetPosition = transform.position;
         switch (direction)
         {

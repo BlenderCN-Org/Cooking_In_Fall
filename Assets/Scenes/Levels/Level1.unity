@@ -515,6 +515,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1000765483}
     m_Modifications:
+    - target: {fileID: 1345783428940218, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: m_Name
+      value: Spawn
+      objectReference: {fileID: 0}
     - target: {fileID: 4159756225277548, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -547,43 +551,76 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 227752976, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+    - target: {fileID: 4159756225277548, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159756225277548, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159756225277548, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 227752976, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: ingredients.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 227752976, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: orders.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 227752976, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: orders.Array.data[0]
+      value: 
+      objectReference: {fileID: 114553832878867041}
+    - target: {fileID: 227752976, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: orders.Array.data[1]
+      value: 
+      objectReference: {fileID: 114880840800253355}
+    - target: {fileID: 227752976, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: orders.Array.data[2]
+      value: 
+      objectReference: {fileID: 114860617630802089}
+    - target: {fileID: 227752976, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: spawnButtonText
+      value: 
+      objectReference: {fileID: 114697449373672711}
+    - target: {fileID: 227752976, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: ingredients.Array.data[0]
+      value: 
+      objectReference: {fileID: 114571597765724370, guid: 5c2e048c2fc19e94abdaec61cb5769ac,
+        type: 3}
+    - target: {fileID: 227752976, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: ingredients.Array.data[1]
+      value: 
+      objectReference: {fileID: 114319734375255350, guid: eb78e225b1b586148a929f827d3437b9,
+        type: 3}
+    - target: {fileID: 227752976, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: ingredients.Array.data[2]
+      value: 
+      objectReference: {fileID: 114319734375255350, guid: eb78e225b1b586148a929f827d3437b9,
+        type: 3}
+    - target: {fileID: 227752976, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
+      propertyPath: ingredients.Array.data[3]
+      value: 
+      objectReference: {fileID: 114474126949801724, guid: aeae1012aa73c734998ca8ceca08c7a6,
+        type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79647b2bfdb1b8f4dbbef9af1105bc84, type: 3}
---- !u!1 &227752975 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1345783428940218, guid: 79647b2bfdb1b8f4dbbef9af1105bc84,
+--- !u!114 &227752976 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 227752976, guid: 79647b2bfdb1b8f4dbbef9af1105bc84,
     type: 3}
   m_PrefabInstance: {fileID: 227752974}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &227752976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 227752975}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a083d75c497e4844adc52d1837633b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredients:
-  - {fileID: 114571597765724370, guid: 5c2e048c2fc19e94abdaec61cb5769ac, type: 3}
-  - {fileID: 114319734375255350, guid: eb78e225b1b586148a929f827d3437b9, type: 3}
-  - {fileID: 114474126949801724, guid: aeae1012aa73c734998ca8ceca08c7a6, type: 3}
-  ingredientsOrder:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  orders:
-  - {fileID: 114553832878867041}
-  - {fileID: 114880840800253355}
-  - {fileID: 114860617630802089}
-  reloadTime: 2
-  turnForce: 40
-  spawnPoint: {fileID: 1558554800}
-  spawnButtonText: {fileID: 114697449373672711}
 --- !u!1 &307856638
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@
 
 public class AudioManager : MonoBehaviour {
 
-    public static AudioManager instance = null;
+    public static AudioManager instance;
 
     void Awake()
     {
@@ -14,6 +14,6 @@ public class AudioManager : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 }

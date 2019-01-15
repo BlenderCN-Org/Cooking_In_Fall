@@ -1,48 +1,47 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using FallingCooking;
 using UnityEngine.UI;
 
 public class RecipeManager : MonoBehaviour
 {
-    public static RecipeManager recipeManagerInstance;
+    public static RecipeManager instance;
 
-    public GameObject prefabRecipeUI;
-    public GameObject prefabIngredient;
-    [HideInInspector] public List<GameObject> recipesUI;
-
+    [SerializeField] private GameObject prefabRecipeUI;
+    [SerializeField] private GameObject prefabIngredient;
     [SerializeField] private GameObject goodEffect;
     [SerializeField] private GameObject badEffect;
-    //private RecipeTemplate currentRecipe;
+
+    private List<GameObject> recipesUI = new List<GameObject>();
     private Transform parentIngredients;
     private bool checkIngredientValue;
 
-    //SINGLETON
     private void Awake()
     {
-        if (recipeManagerInstance == null)
+        if (instance == null)
         {
-            // recipes = new Recipe[5];
-            recipeManagerInstance = this;
+            instance = this;
         }
         else
         {
             Destroy(gameObject);
             return;
         }
-        //DontDestroyOnLoad(recipeManagerInstance); // We keep one instance for music that should never be destroyed
     }
-    // Use this for initialization
+
     private void Start()
     {
+        InitializeUI();
+        checkIngredientValue = true;
+    }
 
-        // Init UI
+    void InitializeUI()
+    {
         foreach (RecipeTemplate recipe in LevelManager.instance.recipes) // Create ingredients
         {
-            GameObject newRecipe = Instantiate(prefabRecipeUI, this.transform);
+            GameObject newRecipe = Instantiate(prefabRecipeUI, transform);
             newRecipe.transform.Find("Name").GetComponent<Text>().text = recipe.name; // Replace recipe name
             parentIngredients = newRecipe.transform.Find("Ingredients");
+
             // Init UI for ingredients
             foreach (Ingredient ing in recipe.listIngredients)
             {
@@ -51,10 +50,9 @@ public class RecipeManager : MonoBehaviour
                 newRecipe.GetComponent<RecipeUIManager>().ingredientListsUI.Add(newIng);
                 newRecipe.GetComponent<RecipeUIManager>().ingredientListsEnum.Add(ing.type);
             }
+
             recipesUI.Add(newRecipe);
         }
-        //currentRecipe = LevelManager.instance.recipes[0];
-        checkIngredientValue = true;
     }
 
     public void IngredientInPan(GameObject ingredient)
@@ -63,14 +61,15 @@ public class RecipeManager : MonoBehaviour
         {
             return;
         }
-        StartCoroutine(DestroyObject(ingredient, 1.5f));
+
+        Destroy(ingredient, 1.5f);
+
         // Check ingredient in list
         if (CheckIngredient(ingredient)) //ingredient.GetComponent<Ingredient>().type == GameManager.Type.Egplant
         {
             // Generate Effect
             GameObject effect = Instantiate(goodEffect);
             effect.transform.position = ingredient.transform.position;
-            StartCoroutine(DestroyObject(effect, 2f));
 
             // Find Ui ingredient
             GameObject uiToremove = recipesUI[0].GetComponent<RecipeUIManager>().ingredientListsUI.Find(x => x.GetComponent<Image>().sprite == ingredient.GetComponent<Ingredient>().icon);
@@ -85,10 +84,6 @@ public class RecipeManager : MonoBehaviour
                 Destroy(recipesUI[0]);
                 recipesUI.RemoveAt(0);
                 LevelManager.instance.recipes.RemoveAt(0);
-                if (LevelManager.instance.recipes.Count != 0)
-                {
-                    //currentRecipe = LevelManager.instance.recipes[0];
-                }
             }
 
             // Check if level is complete
@@ -103,7 +98,6 @@ public class RecipeManager : MonoBehaviour
             // Generate Effect
             GameObject effect = Instantiate(badEffect);
             effect.transform.position = ingredient.transform.position;
-            StartCoroutine(DestroyObject(effect, 2f));
         }
     }
 
@@ -113,12 +107,5 @@ public class RecipeManager : MonoBehaviour
         result = recipesUI[0].GetComponent<RecipeUIManager>().ingredientListsEnum.Contains(ingredient.GetComponent<Ingredient>().type);
 
         return result;
-    }
-
-
-    IEnumerator DestroyObject(GameObject objectToDestroy, float delayTime)
-    {
-        yield return new WaitForSeconds(delayTime);
-        Destroy(objectToDestroy);
     }
 }

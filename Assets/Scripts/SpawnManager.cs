@@ -2,52 +2,49 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SpawnManager : MonoBehaviour {
-
+public class SpawnManager : MonoBehaviour
+{
     [Header("All Ingredients List")]
-    // On récupère tout les prefabs ingredients
-    public Ingredient[] ingredients;
-
-    // On crée notre liste d'attente
-    [HideInInspector] public Ingredient[] ingredientsOrder = new Ingredient[3];
+    [SerializeField] private Ingredient[] ingredients;
 
     [Header("Texts Order Spawning")]
-    public Text[] orders = new Text[3];
+    [SerializeField] private Text[] orders = new Text[3];
 
     [Header("Settings")]
-    public float reloadTime;
-    public float turnForce = 40;
-    public Transform spawnPoint;
+    [SerializeField] private float reloadTime;
+    [SerializeField] private float turnForce = 40;
+    [SerializeField] private Transform spawnPoint;
+    [SerializeField] private Text spawnButtonText;
 
-    [Space(15)]
-    public Text spawnButtonText;
-
-    private float _reloadTime;
+    private Ingredient[] ingredientsOrder = new Ingredient[3];
+    private float reloadTimeTemp;
     private bool canSpawn = true;
 
-	// Use this for initialization
-	void Start () {
-        _reloadTime = reloadTime;
+    void Start()
+    {
+        InitializeOrderList();
 
-        // Initialisation de la liste d'attente
+        reloadTimeTemp = reloadTime;
+        spawnButtonText.text = "Launch";
+    }
+
+    void InitializeOrderList()
+    {
         for (int i = 0; i < ingredientsOrder.Length; i++)
         {
             int rand = Random.Range(0, ingredients.Length);
             ingredientsOrder[i] = ingredients[rand];
             orders[i].text = ingredientsOrder[i].name;
         }
+    }
 
-        spawnButtonText.text = "Launch";
-	}
-
-    public void Spawn() {
-
+    public void Spawn()
+    {
         if (canSpawn)
         {
             // Instantiate Ingredient and apply a torque
-            Ingredient ingredient;
-            ingredient = Instantiate(ingredientsOrder[0], spawnPoint.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
-            Vector3 directionTorque = new Vector3(Random.Range(0f,1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+            Ingredient ingredient = Instantiate(ingredientsOrder[0], spawnPoint.position, Quaternion.Euler(new Vector3(-90, 0, 0)));
+            Vector3 directionTorque = new Vector3(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
             ingredient.gameObject.GetComponent<Rigidbody>().AddTorque(directionTorque * turnForce);
 
             // Update Order
@@ -71,14 +68,14 @@ public class SpawnManager : MonoBehaviour {
         canSpawn = false;
 
         // On affiche le temps sur le boouton
-        _reloadTime = reloadTime;
-        spawnButtonText.text = _reloadTime.ToString("0");
+        reloadTimeTemp = reloadTime;
+        spawnButtonText.text = reloadTimeTemp.ToString("0");
 
-        while (_reloadTime > 0)
+        while (reloadTimeTemp > 0)
         {
             yield return new WaitForSeconds(1f);
-            _reloadTime -= 1;
-            spawnButtonText.text = _reloadTime.ToString("0");
+            reloadTimeTemp -= 1;
+            spawnButtonText.text = reloadTimeTemp.ToString("0");
         }
 
         // Spawn de nouveau possible

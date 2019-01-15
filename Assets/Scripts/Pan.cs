@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class Pan : MonoBehaviour {
+public class Pan : MonoBehaviour
+{
+    [SerializeField] private AudioSource hitPan;
 
-    public AudioSource hitPan;
-    public bool cookedIngredientInPan;
-
+    private bool cookedIngredientInPan;
     private GameObject cookedIngredient;
-    //private int currentScore;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,8 +19,6 @@ public class Pan : MonoBehaviour {
             //Play Sound
             hitPan.pitch = Random.Range(0.5f, 2f);
             hitPan.Play();
-
-            //currentScore++;
         }
     }
 
@@ -36,9 +33,9 @@ public class Pan : MonoBehaviour {
     IEnumerator DoCheck()
     {
         yield return new WaitForSeconds(1f);
-        if (cookedIngredientInPan && cookedIngredient!=null)
+        if (cookedIngredientInPan && cookedIngredient != null)
         {
-            RecipeManager.recipeManagerInstance.IngredientInPan(cookedIngredient);
+            RecipeManager.instance.IngredientInPan(cookedIngredient);
             Destroy(cookedIngredient);
             cookedIngredient = null;
         }

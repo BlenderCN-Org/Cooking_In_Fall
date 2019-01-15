@@ -7,24 +7,24 @@ public class MenuManager : MonoBehaviour {
     [SerializeField] private GameObject menuPanel;
     [SerializeField] private GameObject levelSelector;
 
-    public void Play()
+    public void ShowLevelSelector()
     {
         menuPanel.SetActive(false);
         levelSelector.SetActive(true);
     }
 
-    public void Menu()
+    public void ShowMenuScreen()
     {
         menuPanel.SetActive(true);
         levelSelector.SetActive(false);
     }
 
-    public void LoadMenu(string scene)
+    public void LoadLevel(string scene)
     {
         SceneManager.LoadScene(scene);
     }
 
-    public void Quit()
+    public void QuitGame()
     {
         Application.Quit();
     }

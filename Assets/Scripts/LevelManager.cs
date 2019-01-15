@@ -16,15 +16,15 @@ public class LevelManager : MonoBehaviour
         Steak,
     };
 
-    public static LevelManager instance = null;
-    public GameObject levelFinishedUI;
-    public GameObject canvasReceipe;
-    public GameObject pauseUI;
-
     [Header("Recipes for this Level")]
     public List<RecipeTemplate> recipes;
 
-    public bool pauseState;
+    public static LevelManager instance = null;
+    [SerializeField] private GameObject levelFinishedUI;
+    [SerializeField] private GameObject canvasReceipe;
+    [SerializeField] private GameObject pauseUI;
+
+    private bool pauseState;
 
     void Awake()
     {

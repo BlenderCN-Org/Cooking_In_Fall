@@ -43,10 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd020c5317c0bd4ca0558e63aac1fa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  recipes: []
   levelFinishedUI: {fileID: 0}
   canvasReceipe: {fileID: 0}
   pauseUI: {fileID: 0}
-  recipes:
-  - {fileID: 0}
-  - {fileID: 0}
-  pauseState: 0
